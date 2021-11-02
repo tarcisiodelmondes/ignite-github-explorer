@@ -1,8 +1,10 @@
-export function RepositoryItem({ repository: { name, description, link } }) {
+export function RepositoryItem({
+  repository: { name, description, html_url },
+}) {
   return (
     <li>
-      <strong>{name ?? "Default"}</strong> <p>{description ?? "Default"}</p>
-      <a href={link ?? "Default"}>Acessar repositório</a>
+      <strong>{name}</strong> <p>{description}</p>
+      <a href={html_url}>Acessar repositório</a>
     </li>
   );
 }
